@@ -34,8 +34,3 @@ let passwordInput=document.getElementById("password");
             
             
         });
-       
-       
-
-    
-     
