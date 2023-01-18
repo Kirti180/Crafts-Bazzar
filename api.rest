@@ -1,0 +1,19 @@
+
+GET https://63c657d5d307b76967371c02.mockapi.io/users
+
+
+
+# POST https://63c657d5d307b76967371c02.mockapi.io/users
+# Content-Type: application/json
+
+#   {
+#     "firstName": "Prashant",
+#     "lastName": "singh",
+#     "email": "abd@gmail.com",
+#     "password": "abd123"
+  
+#   }
+
+
+DELETE https://63c657d5d307b76967371c02.mockapi.io/users/5
+

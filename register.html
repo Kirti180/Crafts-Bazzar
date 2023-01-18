@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <style>
+       
+        #card{
+            width: 45%;
+            height: 500px;
+            
+            margin: auto;
+            
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-size: 14px;
+        }
+        #admin-user-btns{
+            display: flex;
+        }
+        .adminCustomer-btn{
+          height: 50px;
+            width: 50%;
+        }
+        #contents{
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        .content-left>img{
+           width: 15%;
+        }
+        #firstName{
+            height: 30px;
+            width: 200px;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+        }
+        #lastName{
+            height: 30px;
+            width: 200px;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+        }
+        #create-account{
+            background-color: #902735;
+            border: 1px solid red;
+            color: white;
+            height: 25px;
+           padding-top: 8px;
+            
+        }#email{
+            height: 30px;
+            width: 200px;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+        }
+        #password{
+            height: 30px;
+            width: 200px;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+        } 
+        #create-account{
+            width: 180px;
+            height: 25px;
+            background-color: #902735;
+            margin: auto;
+            padding-top: 2px;
+            color: white;
+            text-align: center;
+            outline: none;
+         }
+         #create-account:hover{
+            background-color: black;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="card">
+        <div id="admin-user-btns">
+           <button class='adminCustomer-btn'>Admin</button>
+           <button class='adminCustomer-btn'>Customer</button>
+        </div>
+        <div id="contents">
+            <div class="content-left">
+                <h2>BENEFITS</h2>
+                <img src="https://img.icons8.com/doodle/154/empty-box.png" alt="" >
+                <h3>Manage Orders</h3>
+                <p>Track, Return & Cancel your orders</p>
+                <img src="https://img.icons8.com/color/154/add-tag.png" alt="" >
+                <h3>Access Products that you love</h3>
+                <p>Seamless access to Wishlist & Cart items</p>
+                <img src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/2x/external-cart-e-commerce-and-business-xnimrodx-lineal-color-xnimrodx.png" alt="" >
+                <h3>Quicker Checkout</h3>
+                <p>Saved Addresses & bank details for 3 step checkout</p>
+            </div>
+            <div class="content-right">
+               <h2><u>Register</u></h2>
+               <input id="firstName" type="text" placeholder="Enter Your First Name"> <br><br>
+               <input id="lastName" type="text" placeholder="Enter Your Last Name"> <br><br>
+               <input id="email" type="text" placeholder="Enter Your Email/Number"> <br><br>
+               <input id="password" type="text" placeholder="Enter Your Password"><br><br>
+               <input id="create-account" type="button" value="CREATE ACCOUNT">
+               <div id="forgot">
+                  <div><input type="checkbox">Remember Me</div>
+                  <div class="blue">Forgot Password</div>
+               </div>
+               
+              <div id="login">
+                <div><p>Already have an account?</p></div>
+                <div id="newId" class="blue"> <a href="customerLogin.html" >Login</a></div>
+            </div>
+           
+              
+            </div>
+        </div>
+    </div>
+</body>
+<script src="register.js"></script>
+</html>
