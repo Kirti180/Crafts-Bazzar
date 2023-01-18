@@ -1,3 +1,4 @@
+
 // CAROUSEL SECTION 
 let cont = document.getElementById("carousel")
 let image = document.createElement("img")
