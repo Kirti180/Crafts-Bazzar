@@ -31,6 +31,11 @@
 #category_section > div > img{
     width: 100%;
 }
+
+/* FONTS SECTION  */
+
+
+
 #fonts{
     display: flex;
     height: 100px;
@@ -51,6 +56,12 @@
     color: white;
 }
 
+
+
+
+
+
+
 #last_4_img{
     width: 85%;
     margin: auto;
@@ -66,4 +77,48 @@
 
 #carousel > img{
     width: 100%;
+}
+
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width: 480px)  and (max-width:850px){
+    #category_section{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    #last_4_img{
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    #fonts > div >i{
+        font-size: 150%;
+    }
+    .fa-solid , .fa-brands{
+        font-size: 100%;
+    }
+    #fonts > div > span{
+        font-size: 70%;
+    }
+} 
+
+@media screen and (max-width: 480px){
+    #category_section{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    #last_4_img{
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    #fonts > div >i{
+        font-size: 100%;
+    }
+    .fa-solid , .fa-brands{
+        font-size: 50%;
+    }
+    #fonts > div > span{
+        font-size: 30%;
+    }
+
 }

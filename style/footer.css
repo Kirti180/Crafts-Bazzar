@@ -22,3 +22,25 @@ img{
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+/* RESPONSIVENESS */
+@media screen and (min-width: 480px)  and (max-width:850px){
+    #footerabout{
+        display: none;
+    }
+    #footer{
+        padding: 3%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 480px){
+    #footerabout{
+        display: none;
+    }
+    #footer{
+        padding: 5%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}

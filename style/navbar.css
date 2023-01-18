@@ -7,7 +7,9 @@ nav{
 	top: 0;
     background-color: white;
 }
-
+#hamburger{
+    display: none;
+}
 #nav_right_side{
     display: flex;
 }
@@ -49,4 +51,82 @@ nav{
 #nav_left_side > div > i{
     color: #902735;
     margin-right: 7px;
+}
+
+
+
+
+
+#burger{
+    height: 100%;
+    /* width: 40%; */
+    font-family: sans-serif;
+    background-color: #FC2779;
+    display: none;
+}
+#burger> div{
+    transition: color 0.3s ease;
+    padding-top: 10px;
+    font-size: large;
+    padding: 2%;
+    /* background-color: #902735; */
+    font-weight: 600;
+    color: #902735;
+}
+#burger > div:hover{
+    width: 96%;
+    border-radius: 3px;
+    background-color: #902735;
+    color: whitesmoke;
+    /* color: #FC2779; */
+}
+
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width: 480px)  and (max-width:850px){
+    #hamburger{
+        display: block;
+        color: #902735;
+        margin-right: 3%;
+        font-size: 160%;
+        padding-top: 2%;
+    }
+    #nav_left_side{
+        display: none;
+    }
+    #nav_right_side > input{
+        display: none;
+    }
+    nav{
+        padding-left: 1%;
+        justify-content: flex-start;
+        position: -webkit-sticky;
+	    position: sticky;
+	    top: 0;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    #hamburger{
+        display: block;
+        color: #902735;
+        margin-right: 3%;
+        font-size: 160%;
+        padding-top: 2%;
+    }
+    #nav_left_side{
+        display: none;
+    }
+    #nav_right_side > input{
+        display: none;
+    }
+    nav{
+        padding-left: 1%;
+        justify-content: flex-start;
+        position: -webkit-sticky;
+	    position: sticky;
+	    top: 0;
+    }
 }
