@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        #product-container{
+            border:0px solid red;
+        }
+        #nav{
+            border:2px solid green; 
+        }
+        #product-card{
+            margin-top: 50px;
+            border:2px solid blue;
+            display:flex; 
+            justify-content: space-between;
+        }
+        #product-card>#filter-box{
+            margin-top:20px;
+            border-right:1px solid grey;
+            width:18%;
+        }
+        #product-card>div:nth-child(2){
+            margin-top:20px;
+            width:80%;
+            border:2px solid white; 
+        }
+        .mini-card{ 
+            border:0px solid black;
+        }
+        .mini-card>#sort{
+            border:0px solid red;
+            display:flex;
+            justify-content: space-between; 
+        }
+        .mini-card>#sort>div{
+            border:0px solid blue;  
+        }
+        .mini-card>#sort>div:nth-child(1){
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-family: Merriweather !important;
+        }
+        .mini-card>#sort>div:nth-child(1)>div{
+             border:0px solid yellow; 
+             cursor:pointer;
+        }
+        .mini-card>#product{
+            border:0px solid green; 
+            margin-top: 20px;
+        }
+         /* Product Page */
+         #product{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows:repeat(10,auto) ;
+            /* gap: right 20px; */
+            margin: auto;
+            gap:20px;
+          }
+          #product>div{
+            border:0px solid yellow; 
+            width:90%;
+            height: auto;
+            text-align: center;
+            font-family: Merriweather;
+            margin-left: 8px;
+            /* gap:bottom 20px; */
+          }
+          #product>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          }
+          #product>div>h2{
+            padding-top: 14px;
+            height: 10px;
+            font-size: 15px;
+          }
+          #product>div>p{
+            color: #fba937!important;
+          }
+          #product>div>img{
+            width:100%;
+            height:300px;
+          }
+          #product>div>button{
+            width:80%;
+            background-color: #902735 ;
+            color:white;
+            padding: 8px;
+             margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+             border: none;
+          }
+          #product>div>button:hover{
+            background-color: black;
+          }
+        /* Filter-CSS */
+        form{
+            border-top:1px solid grey;
+            /* border-bottom:1px solid grey; */
+        }
+        form>.multipleSelection{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .multipleSelection {
+            width: 300px;
+        }
+  
+        .selectBox {
+            position: relative;
+            border-bottom: 1px solid #ffffff;
+        }
+  
+        .selectBox select {
+            width: 80%;
+            font-weight: 700; 
+            border: none;
+            cursor: pointer!important;
+            /* font-family: Merriweather; */
+            font-family: Roboto,sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+            text-decoration: none solid rgb(0,0,0);
+            text-align: left;
+            word-spacing: 0px;
+        }
+  
+        .overSelect {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+  
+        #checkBoxes {
+            display: none;
+        }
+        #checkBoxes1 {
+            display: none;
+        }
+  
+        #checkBoxes label {
+            display: block;
+        }
+        #checkBoxes1 label {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="product-container">
+        <div id="nav">NAVBAR</div>
+        <div id="product-card">
+            <div id="filter-box">
+                <h1>Filter by</h1>
+                <form>
+                    <div class="multipleSelection">
+                        <div class="selectBox" 
+                            onclick="showCheckboxes()">
+                            <select>
+                                <option>Price</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+              
+                        <div id="checkBoxes">
+                            <label for="first">
+                                <input type="checkbox" id="first" />
+                                Below 500 (1307)
+                            </label>
+                              
+                            <label for="second">
+                                <input type="checkbox" id="second" />
+                                500-1000 (694)
+                            </label>
+                            <label for="third">
+                                <input type="checkbox" id="third" />
+                                1000-2000 (520)
+                            </label>
+                            <label for="fourth">
+                                <input type="checkbox" id="fourth" />
+                                2000-5000 (590)
+                            </label>
+                            <label for="fiveth">
+                                <input type="checkbox" id="fiveth" />
+                                Above 5000 (436)
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="mini-card">
+                <div id="sort">
+                    <div>
+                        <div>Sort By: Popular |</div>
+                        <div onclick="Sorting()" value="Price : Low to High |" id="LTH">Price : Low to High |</div>
+                        <div onclick="Sorting2()" value="Price : High to Low |" id="HTL">Price : High to Low |</div>
+                        <div>Discount |</div>
+                        <div>New Arrivals</div>
+                    </div>
+                    <div>Showing 1 - 48 of 3298</div>
+                </div>
+                <div id="product">
+                    <!-- append here -->
+                </div>
+                <div id="page"></div>
+            </div>
+        </div>
+    </div>       
+</body>
+</html>
+
+<script>
+    // Filter
+    var show = true;
+
+    function showCheckboxes() {
+        var checkboxes = 
+            document.getElementById("checkBoxes");
+
+        if (show) {
+            checkboxes.style.display = "block";
+            show = false;
+        } else {
+            checkboxes.style.display = "none";
+            show = true;
+        }
+    }
+
+    //    FILTER
+    // function showCheckboxes(){
+    //     let selected =document.querySelector("#first");
+    //     let filterData = data.filter(function(el){
+    //         return el.price == selected;
+    //     });
+    //     console.log(filterData);
+    //     DisplayTable(filterData)
+    //   }
+
+    // Fetch and Render
+    let url="https://63c657d5d307b76967371c02.mockapi.io/products";
+
+    let data=[];
+
+    async function getData(){
+        try{
+        let res=await fetch(url);
+        let out=await res.json();
+        data = [...out]
+        DisplayTable(data);
+        } catch(err){
+            alert(err);
+        }
+    }
+    getData();
+
+    let cartArr=JSON.parse(localStorage.getItem("cart")) || [];
+
+    function DisplayTable(Data){
+        // console.log(Data)
+        let mainSection = document.getElementById("product");
+        mainSection.textContent="";
+
+        Data.forEach(function(el,i){
+       let card=document.createElement("div")
+
+       let productImg=document.createElement("img")
+       productImg.src=el.image;
+
+       let title=document.createElement("h2")
+       title.innerText=el.title;
+
+       let price=document.createElement("p")
+       price.innerText=el.price;
+
+       let btn=document.createElement("button")
+       btn.innerText="Add to cart"
+       btn.addEventListener("click",function (){ 
+        addTocart(el);
+        alert("Product Successfully added to Cart");
+        window.location.href="cart.html"
+       });
+
+       card.append(productImg,title,price,btn)
+      
+       document.querySelector("#product").append(card);
+     })
+    }
+
+     function addTocart(el){
+        cartArr.push(el);
+       localStorage.setItem("cart",JSON.stringify(cartArr));
+       //console.log(cartArr)
+     }
+    
+    // SORT
+    function Sorting(){
+        let selected=document.querySelector("#LTH").value;
+        if(selected=="Price : Low to High |"){
+            data.sort((a,b)=>a.price - b.price);
+        }
+           console.log(data)
+         alert("Price : Low to High |")
+        DisplayTable(data)
+        
+    }
+    
+    function Sorting2(){
+        let HTL=document.querySelector("#HTL").value;
+        if(HTL=="Price : High to Low |"){
+            data.sort((a,b)=>b.price-a.price);
+        }
+        //   console.log(data)
+        alert("Price : High to Low |")
+        DisplayTable(data);
+        
+    }
+
+// function renderCardList(anything) {
+
+// let cardList = `
+//   <div class="card-list">
+//     ${anything.map(item =>
+//   getCard(item.title, item.desc, item.price, item.image)
+// ).join(" ")}
+//   </div>  
+
+//   `
+// mainSection.innerHTML = cardList;
+
+
+// }
+
+// function getCard(title, desc, price,image) {
+ 
+// let card = `
+// <div class="card">
+//     <div class="card_img">
+//       <img src=${image} alt="food"/>
+//     </div>
+//     <div class="card_body">
+//        <h2 class="card_item card_title">${title}</h2>
+//        <p class="card_item card_price">${price}</p>
+//        <button onclick="myfun()" class="card_item_card_btn">Add To Cart</button>
+//     </div>
+// </div>
+// `
+// // myfun(class={"card_item_card_btn"});
+// // let btn=document.querySelector(".card_item_card_btn");
+// // for(let i=0;i<btn.length;i++){
+// //     btn[i].addEventListener("click",()=>{
+// //         let DATA = JSON.parse(localStorage.getItem("cart")) || [];
+// //         if(DATA.length === 0){
+// //             DATA.push(data[i])
+// //             localStorage.setItem("cart",JSON.stringify(DATA))
+
+// //         }
+// //     })
+// // }
+
+// return card;
+// }
+
+// // ADD CART
+// // let cartArr=[];
+//  let cartArr=JSON.parse(localStorage.getItem("cart")) || [];
+
+// // let cartbtn = document.querySelector(".card>.card_body>.card_item_card_btn");
+// // cartbtn.addEventListener("click",function(){
+// //     // addTocart(el)
+// //     console.log("****")
+// // })
+
+// // function myfun(el){
+// // //    console.log("****")
+// //    console.log(el)
+// // // cartArr.push(el);
+// //    localStorage.setItem("cart",JSON.stringify(cartArr));
+// // //   addTocart()
+// // }
+
+// // function addTocart(){
+// //         cartArr.push("el");
+// //        localStorage.setItem("cart",JSON.stringify(cartArr));
+// //        //console.log(cartArr)
+// // }
+
+// function myfun(data){
+//     let btn=document.querySelector(".card_item_card_btn");
+//     let DATA = JSON.parse(localStorage.getItem("cart")) || [];
+//     for(let i=0;i<data.length;i++){
+//     //  btn[i].addEventListener("click",()=>{
+        
+//            if(DATA){
+//             DATA.push(data[i])
+//             localStorage.setItem("cart",JSON.stringify(DATA))
+//             console.log("ooooooo")
+//            }
+//     //  })
+//  }
+// }
+
+
+   
+
+</script>
+
