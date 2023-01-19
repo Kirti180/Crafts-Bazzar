@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../Styles/product.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="product-container">
+        <div id="nav">NAVBAR</div>
+        <div id="product-card">
+            <div id="filter-box">
+                <h2>Filter by</h2>
+                <form>
+                    <div class="multipleSelection">
+                        <div class="selectBox" 
+                            onclick="showCheckboxes()">
+                            <select>
+                                <option>Price</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+              
+                        <div id="checkBoxes">
+                            <label for="first">
+                                <input onclick="showPrice()" type="checkbox" id="first" />
+                                Below 500 (1307)
+                            </label>
+                              
+                            <label for="second">
+                                <input onclick="showPrice()" type="checkbox" id="second" />
+                                500-1000 (694)
+                            </label>
+                            <label for="third">
+                                <input onclick="showPrice()" type="checkbox" id="third" />
+                                1000-2000 (520)
+                            </label>
+                            <label for="fourth">
+                                <input onclick="showPrice()" type="checkbox" id="fourth" />
+                                2000-5000 (590)
+                            </label>
+                            <label for="fiveth">
+                                <input onclick="showPrice()" type="checkbox" id="fiveth" />
+                                Above 5000 (436)
+                            </label>
+                        </div>
+                    </div>
+                </form>
+
+                <form>
+                    <div class="multipleSelection">
+                        <div class="selectBox" 
+                            onclick="showCheckboxes()">
+                            <select>
+                                <option>Discount</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+              
+                        <div id="checkBoxes1">
+                            <label for="first">
+                                <input type="checkbox" id="first" />
+                                0% or more (3547)
+                            </label>
+                              
+                            <label for="second">
+                                <input type="checkbox" id="second" />
+                                10% or more (291)
+                            </label>
+                            <label for="third">
+                                <input type="checkbox" id="third" />
+                                20% or more (284)
+                            </label>
+                            <label for="fourth">
+                                <input type="checkbox" id="fourth" />
+                                30% or more (210)
+                            </label>
+                            <label for="fiveth">
+                                <input type="checkbox" id="fiveth" />
+                                40% or more (165)
+                            </label>
+                        </div>
+                    </div>
+                </form>
+        
+        
+                <form>
+                    <div class="multipleSelection">
+                        <div class="selectBox" 
+                            onclick="showCheckboxes()">
+                            <select>
+                                <option>Category</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+              
+                        <div id="checkBoxes">
+                            <label for="first">
+                                <input type="checkbox" id="first" />
+                                Below 500 (1307)
+                            </label>
+                              
+                            <label for="second">
+                                <input type="checkbox" id="second" />
+                                500-1000 (694)
+                            </label>
+                            <label for="third">
+                                <input type="checkbox" id="third" />
+                                1000-2000 (520)
+                            </label>
+                            <label for="fourth">
+                                <input type="checkbox" id="fourth" />
+                                2000-5000 (590)
+                            </label>
+                            <label for="fiveth">
+                                <input type="checkbox" id="fiveth" />
+                                Above 5000 (436)
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="mini-card">
+                <div id="sort">
+                    <div>
+                        <div>Sort By: &nbsp;&nbsp; Popular |</div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div onclick="Sorting()" value="LTH" id="LTH">Price : Low to High |</div> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div onclick="Sorting2()" value="HTL" id="HTL">Price : High to Low |</div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div>Discount |</div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div>New Arrivals</div>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div>Showing 1 - 48 of 3298</div>
+                </div>
+                <div id="product">
+                    <!-- append here -->
+                </div>
+                <div id="page"></div>
+            </div>
+        </div>
+    </div>       
+</body>
+</html>
+
+<script src="../Scripts/product.js">
+    
+</script>
+

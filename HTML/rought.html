@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        .mini-card{ 
+            border:0px solid black;
+        }
+        .mini-card>#sort{
+            border:0px solid red;
+            display:flex;
+            justify-content: space-between; 
+        }
+        .mini-card>#sort>div{
+            border:0px solid blue;  
+        }
+        .mini-card>#sort>div:nth-child(1){
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-family: Merriweather !important;
+        }
+        .mini-card>#sort>div:nth-child(1)>div{
+             border:0px solid yellow; 
+             cursor:pointer;
+        }
+        .mini-card>#product{
+            border:0px solid green; 
+            margin-top: 20px;
+        }
+        
+
+
+        #container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap:20px;
+        }
+        #container>div>img{
+            width:100%;
+            height:400px;
+        }
+        #container>div{
+            text-align: center;
+            padding-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <select onchange="handleSorting()">
+        <option value="LTH">LTH</option>
+        <option value="HTL">HTL</option>
+     </select> -->
+        
+
+            
+                <select onchange="handleSorting()">
+                    <!-- <option value="LTH">Price : Low to High</option> -->
+                    <option value="HTL">HTL</option>
+                 </select>
+            
+    
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+
+    // Fetch and Render
+    let url="https://restcountries.com/v3.1/all";
+
+    let data=[];
+
+    async function getData(){
+        try{
+        let res=await fetch(url);
+        let out=await res.json();
+        data = [...out]
+        // console.log(data)
+        DisplayTable(data);
+        } catch(err){
+            alert(err);
+        }
+    }
+    getData();
+
+    let cartArr=JSON.parse(localStorage.getItem("cart")) || [];
+
+    function DisplayTable(out){
+        document.querySelector("#container").innerHTML="";
+        /* console.log(out); */
+        out.forEach((el)=>{
+        let card=document.createElement("div")  
+          
+          let imageProd=document.createElement("img")
+          imageProd.setAttribute("src",el.flags.svg)
+
+          let country=document.createElement("h2")
+          country.innerText=el.name.common;
+          
+          let pop=document.createElement("p")
+          pop.innerText=el.population;
+
+          let region=document.createElement("p")
+          region.innerText=el.region;
+
+          let cap=document.createElement("p")
+          cap.innerText=el.capital;
+
+          card.append(imageProd,country,pop,region,cap)
+          document.querySelector("#container").append(card)  
+
+        });
+    }
+
+     function addTocart(el){
+         cartArr.push(el);
+        localStorage.setItem("cart",JSON.stringify(cartArr));
+    //    console.log(cartArr)
+     }
+    
+
+    
+
+
+    function handleSorting(){
+        let selected=document.querySelector("select").value;
+        if(selected=="HTL"){
+            data.sort((a,b)=>b.population-a.population);
+        }
+        // if(selected=="LTH"){
+        //     data.sort((a,b)=>a.population-b.population);
+        // }
+        // console.log(data)
+        DisplayTable(data)
+    } 
+
+ 
+    
+    
+    
+</script>
+
