@@ -39,7 +39,8 @@
 
 
   #checkout{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 2%;
+    box-shadow: #902735 0px 5px 15px;
     width: 40%;
     padding-top: 2%;
     padding-bottom: 5%;
