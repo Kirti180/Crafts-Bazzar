@@ -41,7 +41,57 @@
   <body>
     <div id="navbar"></div>
     <br /><br /><br />
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <br>
+        <div class="container1">
+            <h1>ENTER OTP</h1>
+            <div class="userInput">
+              <input
+                type="text"
+                id="ist"
+                maxlength="1"
+                onkeyup="clickEvent(this,'sec')"
+              />
+              <input
+                type="text"
+                id="sec"
+                maxlength="1"
+                onkeyup="clickEvent(this,'third')"
+              />
+              <input
+                type="text"
+                id="third"
+                maxlength="1"
+                onkeyup="clickEvent(this,'fourth')"
+              />
+              <input
+                type="text"
+                id="fourth"
+                maxlength="1"
+                onkeyup="clickEvent(this,'fifth')"
+              />
+              <div id="fifth"></div>
+            </div>
+            <button
+              style="
+                height: 30px;
+                background-color: teal;
+                color: white;
+                border-radius: none;
+                border: none;
+              "
+             onclick="handleClick()"
+            >
+              SUBMIT
+            </button>
+          </div>
+      </div>
+    </div>
+    </div>
     <center>
+     
       <div id="checkout">
         <h2 style="margin-left: 10%">
           Total Payable : ₹<spam id="checkoutamout"></spam>
@@ -250,24 +300,37 @@
             <!-- <span class="caret"></span> --></button
           ><br /><br />
 
-          <button
+          <!-- <button
             style="margin-top: 4%; margin-left: 35%"
             class="btn btn-default dropdown-toggle"
-            type="button"
+           
             id="dropdownMenu"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="true"
           >
-            Place Order
-            <!-- <span class="caret"></span> -->
-          </button>
+        
+           
+          </button> -->
+          <a  href="#open-modal" >
+            <div id="dropdownMenu"><span id="order">Place Order</span> </div>
+           </a>
+          
         </form>
+        
+       
       </div>
       <br /><br /><br /><br /><br /><br />
     </center>
     <div id="footer"></div>
   </body>
+
+  <center>
+    
+    
+
+</center>
+
 </html>
 
 <script type="module">
@@ -277,4 +340,38 @@
 <script type="module">
   import navbar from "./components/navbar.js";
   document.getElementById("navbar").innerHTML = navbar();
+</script>
+<!-- =================otp part==================== -->
+<script>
+  let order=document.getElementById("dropdownMenu")
+  // let a = document.createElement("a");
+  //   a.setAttribute("href", "#open-modal");
+    // order.append(a)
+  
+order.addEventListener('click',function(){
+  alert('Your OTP is 1212')
+})
+
+let ans = "";
+function clickEvent(first, last) {
+  if (first.value.length) {
+    let val1 = document.querySelector("#ist").value;
+    let val2 = document.querySelector("#sec").value;
+    let val3 = document.querySelector("#third").value;
+    let val4 = document.querySelector("#fourth").value;
+    document.getElementById(last).focus();
+    ans = val1 + val2 + val3 + val4;
+    console.log(ans);
+  }
+}
+
+function handleClick() {
+  if (ans == "1212") {
+    setTimeout(()=>{
+      alert("Order Placed Successfully");
+    },2000)
+    
+  }
+}
+
 </script>
