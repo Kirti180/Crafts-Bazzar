@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <script src="https://kit.fontawesome.com/714346974b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <title>Product Page</title>
     <style>
         #product-container{
@@ -159,7 +164,7 @@
 </head>
 <body>
     <div id="product-container">
-        <div id="nav">NAVBAR</div>
+        <div id="navbar"></div>
         <div id="product-card">
             <div id="filter-box">
                 <h1>Filter by</h1>
@@ -218,7 +223,8 @@
                 <div id="page"></div>
             </div>
         </div>
-    </div>       
+    </div>
+    <div id="footer"></div>       
 </body>
 </html>
 
@@ -328,6 +334,10 @@
         
     }
 
+
+    // ==============navbar and footer=========
+    
+
 // function renderCardList(anything) {
 
 // let cardList = `
@@ -417,3 +427,11 @@
 
 </script>
 
+<script type="module">
+    import footer from "./components/footer.js";
+    document.getElementById("footer").innerHTML = footer();
+  </script>
+  <script type="module">
+    import navbar from "./components/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+  </script>
