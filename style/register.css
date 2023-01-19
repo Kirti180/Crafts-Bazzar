@@ -1,0 +1,72 @@
+#card{
+    width: 45%;
+    height: 500px;
+    
+    margin: auto;
+    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 14px;
+}
+#admin-user-btns{
+    display: flex;
+}
+.adminCustomer-btn{
+  height: 50px;
+    width: 50%;
+}
+#contents{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.content-left>img{
+   width: 15%;
+}
+#firstName{
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+#lastName{
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+#create-account{
+    background-color: #902735;
+    border: 1px solid red;
+    color: white;
+    height: 25px;
+   padding-top: 8px;
+    
+}#email{
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+#password{
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+} 
+#create-account{
+    width: 180px;
+    height: 25px;
+    background-color: #902735;
+    margin: auto;
+    padding-top: 2px;
+    color: white;
+    text-align: center;
+    outline: none;
+ }
+ #create-account:hover{
+    background-color: black;
+}
