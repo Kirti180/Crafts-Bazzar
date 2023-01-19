@@ -1,9 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/navbar.css">   
+    <!-- <link rel="stylesheet" href="style/index.css"> -->
+    <link rel="stylesheet" href="style/cartpage.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/product.css">
     <title>cartpage</title>
 </head>
 <body>
@@ -18,9 +25,24 @@
             <a href=".Register/Login.html">Register/Login</a>
             <a href="./cartpage.html">Cart</a>
       </div> -->
-      <div >
+      <div id="nav_left_side">
+        <div><i class="fa-solid fa-user "></i><span>Register / Login</span></div>
+        <div><i class="fa-regular fa-heart "></i><span>Wishlist</span></div>
+        <div><i class="fa-solid fa-cart-shopping "></i><span><a href="./cartpage.html">Cart</a></span></div>
+        </div>
+    <div id="burger">
+      <div>Register/Login</div>
+      <div>Wishlist</div>
+      <div><a href="./cart.html">Cart</a></div>
+  </div>
+        <!-- SUB NAVBAR -->
+    <div id="sub-navbar">
+      <div class="home_decor">Home Decor</div>
+      <div class="home_decor">Product Near Me</div>
+  </div>
+  <!-- SUB NAVBAR ENDS HERE -->
         <div id="bar">
-        <img src="https://www.craftsvilla.com/assets/group-6.png" alt="">	
+        <img style="height: 20%;width: 20%;" src="https://www.craftsvilla.com/assets/group-6.png" alt="">	
       <h1>Your Cart is Empty</h1> 
     </div>
         <div id="Cart" class="category1">
@@ -36,3 +58,7 @@
         </body>
    <script src="scripts/cartpage.js"></script>
    </html>
+   <script type="module">
+    import footer from './components/footer.js'
+    document.getElementById('footer').innerHTML= footer()
+  </script>
