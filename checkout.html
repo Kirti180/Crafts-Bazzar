@@ -329,6 +329,59 @@
     
     
 
+    <div class="container1">
+    </div>
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <br>
+        <div class="container">
+            <h1>ENTER OTP</h1>
+            <div class="userInput">
+              <input
+                type="text"
+                id="ist"
+                maxlength="1"
+                onkeyup="clickEvent(this,'sec')"
+              />
+              <input
+                type="text"
+                id="sec"
+                maxlength="1"
+                onkeyup="clickEvent(this,'third')"
+              />
+              <input
+                type="text"
+                id="third"
+                maxlength="1"
+                onkeyup="clickEvent(this,'fourth')"
+              />
+              <input
+                type="text"
+                id="fourth"
+                maxlength="1"
+                onkeyup="clickEvent(this,'fifth')"
+              />
+              <div id="fifth"></div>
+            </div>
+            <button
+              style="
+                height: 30px;
+                background-color: teal;
+                color: white;
+                border-radius: none;
+                border: none;
+              "
+             onclick="handleClick()"
+            >
+              SUBMIT
+            </button>
+          </div>
+      </div>
+    </div>
+    </div>
+
+
 </center>
 
 </html>
@@ -352,6 +405,7 @@ order.addEventListener('click',function(){
   alert('Your OTP is 1212')
 })
 
+
 let ans = "";
 function clickEvent(first, last) {
   if (first.value.length) {
@@ -371,6 +425,7 @@ function handleClick() {
       alert("Order Placed Successfully");
     },2000)
     
+
   }
 }
 

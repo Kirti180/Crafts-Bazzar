@@ -90,6 +90,7 @@ span{
     background-color: #902735;
 color: white;
 padding-top: 1%;
+
 } */
 .userInput > input {
   width: 50px;
@@ -98,6 +99,12 @@ padding-top: 1%;
   font-size: 30px;
 }
  .modal-window {
+}
+
+
+/* ==============OTP part================================ */
+
+
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -142,19 +149,26 @@ padding-top: 1%;
   color: black;
 }
 
+
+
 .userInput > input {
   width: 30px;
   height: 30px;
   text-align: center;
   font-size: 30px;
 }
+
 .container1 {
+
+
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   width: 50%;
   margin: auto;
+
   text-align: center;
 }
 #dropdownMenu{
@@ -171,4 +185,5 @@ padding-top: 1%;
 }
 #order{
   margin-left: 10px;
+
 }
