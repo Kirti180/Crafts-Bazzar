@@ -4,7 +4,11 @@ let createAccountBtn=document.getElementById("create-account");
 
 let Data=JSON.parse(localStorage.getItem("register"))||[];
 
+let customerBtn=document.getElementById("customer");
 
+customerBtn.addEventListener("click",()=>{
+    window.location.href="./customerLogin.html"
+})
 
 createAccountBtn.addEventListener("click",()=>{
 let firstnameInput=document.getElementById("firstName");
@@ -34,3 +38,4 @@ let passwordInput=document.getElementById("password");
             
             
         });
+
