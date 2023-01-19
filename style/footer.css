@@ -1,0 +1,46 @@
+#footer{
+    width: 100%;
+    background-color: #902735;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5%;
+  margin-top: 10%;
+}
+#footerabout{
+    margin-left: 25%;
+}
+#imagecard{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3%;
+
+}
+img{
+    width: 80%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* RESPONSIVENESS */
+@media screen and (min-width: 480px)  and (max-width:850px){
+    #footerabout{
+        display: none;
+    }
+    #footer{
+        padding: 3%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 480px){
+    #footerabout{
+        display: none;
+    }
+    #footer{
+        padding: 5%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}

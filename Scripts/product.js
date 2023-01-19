@@ -14,31 +14,38 @@ function showCheckboxes() {
         show = true;
     }
 }
+var show = true;
+
+function showCheckboxes1() {
+    var checkboxes =
+        document.getElementById("checkBoxes1");
+
+    if (show) {
+        checkboxes.style.display = "block";
+        show = false;
+    }
+    else {
+        checkboxes.style.display = "none";
+        show = true;
+    }
+}
+var show = true;
+
+function showCheckboxes2() {
+    var checkboxes =
+        document.getElementById("checkBoxes");
+
+    if (show) {
+        checkboxes.style.display = "block";
+        show = false;
+    }
+    else {
+        checkboxes.style.display = "none";
+        show = true;
+    }
+}
 
 function showPrice() {
-    // let selected =document.querySelector("#second");
-    // console.log(data)
-    // let newdata=data.filter(function (el) {
-    //     if(el.price <= 500 ){
-    //          return el.price <= 500;
-    //     }
-    //     if(el.price > 500 && el.price <= 1000){
-    //          return el.price > 500 && el.price <=1000;
-    //     }
-    //     // if(el.price > 1000 && el.price <= 2000){
-    //     //      return el.price > 1000 && el.price <=2000;
-    //     // }
-    //     //  if(el.price > 2000 && el.price <= 5000){
-    //     //      return el.price > 2000 && el.price <=5000;
-    //     // }
-    //     // if(el.price > 5000){
-    //     //   return  el.price > 5000
-    //     // }
-    // });
-    //  console.log(newdata) 
-    //   DisplayTable(newdata)
-
-
     let arr = [];
     let arr1 = [];
     let arr2 = [];
@@ -73,6 +80,40 @@ function showPrice() {
     DisplayTable(arr4)
 }
 
+function showCategory() {
+    let cat = [];
+    let cat1 = [];
+    let cat2 = [];
+    let cat3 = [];
+    let cat4 = [];
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].category === "fashion") {
+            cat.push(data[i]);
+        }else if (data[i].category == "ceramic mugs") {
+            cat1.push(data[i]);
+        }
+        if (data[i].category == "home decor") {
+            cat2.push(data[i]);
+        }
+        if (data[i].category > "idols") {
+            cat3.push(data[i]);
+        }
+        if (data[i].category == "kitchen Ware") {
+            cat4.push(data[i]);
+        }
+    }
+    //   console.log(cat) 
+     DisplayTable(cat)
+    //    console.log(cat1) 
+    DisplayTable(cat1)
+    //   console.log(cat2) 
+    DisplayTable(cat2)
+    //   console.log(cat3) 
+    DisplayTable(cat3)
+    //   console.log(cat4) 
+    DisplayTable(cat4)
+}
+
 
 
 // Fetch and Render
@@ -85,7 +126,7 @@ async function getData() {
         let res = await fetch(url);
         let out = await res.json();
         data = [...out]
-        // console.log(data)
+        //  console.log(data)
         DisplayTable(data);
     } catch (err) {
         alert(err);
@@ -121,6 +162,7 @@ function DisplayTable(Data) {
             localStorage.setItem("Cart", JSON.stringify(cartArr));
             // window.location.href="cart.html"
         });
+
 
         card.append(productImg, title, price, btn)
 
@@ -160,3 +202,4 @@ function Sorting2() {
     // console.log(data);
     DisplayTable(data)
 }
+

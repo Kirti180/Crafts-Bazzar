@@ -46,7 +46,8 @@ buy button (onclick use local storage)[key:"ckeckout"]
 
 ///=======checkout====///////
 
-total
+total 
+
 placeorder button(onclick alert "order placed successfully")
 
 
