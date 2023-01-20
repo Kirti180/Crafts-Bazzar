@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/checkout.css" />
+    <link rel="stylesheet" href="style/otp.css">
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -392,9 +393,10 @@
   // let a = document.createElement("a");
   //   a.setAttribute("href", "#open-modal");
     // order.append(a)
-  
+  let otp;
 order.addEventListener('click',function(){
-  alert('Your OTP is 1212')
+   otp=Math.floor(Math.random() * (9999 - 1000)) + 1000
+  alert(`Your OTP is ${otp}`)
 })
 
 
@@ -412,7 +414,7 @@ function clickEvent(first, last) {
 }
 
 function handleClick() {
-  if (ans == "1212") {
+  if (ans == otp) {
     window.location.href="./last.html"
     
 
