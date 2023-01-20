@@ -1,4 +1,7 @@
-GET https://63c657d5d307b76967371c02.mockapi.io/users
+
+GET https://63c657d5d307b76967371c02.mockapi.io/users/1
+
+GET https://63c657d5d307b76967371c02.mockapi.io/users/1
 
 
 
@@ -14,5 +17,5 @@ GET https://63c657d5d307b76967371c02.mockapi.io/users
 #   }
 
 
-
+DELETE https://63c657d5d307b76967371c02.mockapi.io/users/5
 
