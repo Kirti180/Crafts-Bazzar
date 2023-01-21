@@ -2,6 +2,7 @@
     let cart=document.getElementById("Cart");
     let empty=document.getElementById("submit")
     let buy=document.getElementById("submit")
+  let contain=document.getElementById("contain")
     empty.addEventListener("click",() =>
           { 
             localStorage.clear();

@@ -8,14 +8,83 @@
 
     <link rel="stylesheet" href="style/adminLogin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="./style/otp.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- <nav id="navbar1" style="width: 100%;"></nav> -->
+    <!-- ==========otp============ -->
+<center>
+    
+    
+
+    <div class="container1">
+    </div>
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <br>
+        <div class="container">
+            <h1>ENTER OTP</h1>
+            <div class="userInput">
+              <input
+                type="text"
+                id="ist"
+                maxlength="1"
+                onkeyup="clickEvent(this,'sec')"
+              />
+              <input
+                type="text"
+                id="sec"
+                maxlength="1"
+                onkeyup="clickEvent(this,'third')"
+              />
+              <input
+                type="text"
+                id="third"
+                maxlength="1"
+                onkeyup="clickEvent(this,'fourth')"
+              />
+              <input
+                type="text"
+                id="fourth"
+                maxlength="1"
+                onkeyup="clickEvent(this,'fifth')"
+              />
+              <div id="fifth"></div>
+            </div>
+            <button
+              style="
+                height: 30px;
+                background-color: teal;
+                color: white;
+                border-radius: none;
+                border: none;
+              "
+             onclick="handleClick()"
+            >
+              SUBMIT
+            </button>
+          </div>
+      </div>
+    </div>
+    </div>
+
+
+</center>
+<!-- =================otp end======= -->
+
     <div id="card">
-        <div id="admin-user-btns">
-           <button id="admin" class='adminCustomer-btn'>Admin</button>
-           <button id="customer" class='adminCustomer-btn'>Customer</button>
+        <div id="admin-user-btn">
+            <a style="text-decoration: none;" href="#open-modal" >
+                <div id="admin_cust"><span id="order">Admin</span> </div>
+               </a>
+               <a style="text-decoration: none;" href="./customerRegister.html">
+               <div id="admin_cust">Customer</div>
+            </a>
         </div>
         <div id="contents">
             <div class="content-left">
@@ -51,4 +120,9 @@
     </div>
 </body>
 <script src="scripts/adminLogin.js"></script>
+<script src="./scripts/otp.js"></script>
 </html>
+<!-- <script type="module">
+    import navbar1 from "./components/navbar1.js";
+    document.getElementById("navbar1").innerHTML = navbar1();
+  </script> -->
