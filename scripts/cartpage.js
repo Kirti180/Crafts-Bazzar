@@ -18,7 +18,7 @@
 
           })
          
-     let cartdata=JSON.parse(localStorage.getItem("cart"));
+     let cartdata=JSON.parse(localStorage.getItem("Cart"));
           if(cartdata===null)
           {
             cartdata=[];
@@ -31,11 +31,11 @@ let total_price;
           function displayproduct(data)
          {
         cart.innerHTML=null;
-        let cartItemsfromLS=JSON.parse(localStorage.getItem("cart"));
+        let cartItemsfromLS=JSON.parse(localStorage.getItem("Cart"));
         console.log(cartItemsfromLS);
     
          let total_price=cartItemsfromLS.reduce(function(acc,el){
-            return acc+el.price;
+            return acc+ +el.price;
          },0);
         console.log(total_price)
         localStorage.setItem("price1",total_price)
