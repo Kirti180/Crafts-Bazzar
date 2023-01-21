@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+
+    <link rel="stylesheet" href="style/adminLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="./style/otp.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <nav id="navbar1" style="width: 100%;"></nav> -->
+    <!-- ==========otp============ -->
+<center>
+    
+    
+
+    <div class="container1">
+    </div>
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <br>
+        <div class="container">
+            <h1>ENTER OTP</h1>
+            <div class="userInput">
+              <input
+                type="text"
+                id="ist"
+                maxlength="1"
+                onkeyup="clickEvent(this,'sec')"
+              />
+              <input
+                type="text"
+                id="sec"
+                maxlength="1"
+                onkeyup="clickEvent(this,'third')"
+              />
+              <input
+                type="text"
+                id="third"
+                maxlength="1"
+                onkeyup="clickEvent(this,'fourth')"
+              />
+              <input
+                type="text"
+                id="fourth"
+                maxlength="1"
+                onkeyup="clickEvent(this,'fifth')"
+              />
+              <div id="fifth"></div>
+            </div>
+            <button
+              style="
+                height: 30px;
+                background-color: teal;
+                color: white;
+                border-radius: none;
+                border: none;
+              "
+             onclick="handleClick()"
+            >
+              SUBMIT
+            </button>
+          </div>
+      </div>
+    </div>
+    </div>
+
+
+</center>
+<!-- =================otp end======= -->
+
+    <div id="card">
+        <div id="admin-user-btn">
+            <a style="text-decoration: none;" href="#open-modal" >
+                <div id="admin_cust"><span id="order">Admin</span> </div>
+               </a>
+               <a style="text-decoration: none;" href="./customerRegister.html">
+               <div id="admin_cust">Customer</div>
+            </a>
+        </div>
+        <div id="contents">
+            <div class="content-left">
+                <h2>BENEFITS</h2>
+                <img src="https://img.icons8.com/doodle/154/empty-box.png" alt="" >
+                <h3>Manage Orders</h3>
+                <p>Track, Return & Cancel your orders</p>
+                <img src="https://img.icons8.com/color/154/add-tag.png" alt="" >
+                <h3>Access Products that you love</h3>
+                <p>Seamless access to Wishlist & Cart items</p>
+                <img src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/2x/external-cart-e-commerce-and-business-xnimrodx-lineal-color-xnimrodx.png" alt="" >
+                <h3>Quicker Checkout</h3>
+                <p>Saved Addresses & bank details for 3 step checkout</p>
+            </div>
+            <div class="content-right">
+               <h2><u>Admin Login/Signup</u></h2>
+               <input id="email" type="text" placeholder="Email/Number"> <br><br>
+               <input id="password" type="text" placeholder="Password"><br><br>
+               <div id="forgot">
+                <div><input type="checkbox">Remember Me</div>
+                <div class="blue">Forgot Password</div>
+              </div>
+               <div id="login">Login</div>
+               
+              <div id="create">
+                <div><p>Don't have an account?</p></div>
+                <div id="newId" class="blue"> <a href="adminRegister.html" >create your account</a></div>
+            </div>
+           
+              
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scripts/adminLogin.js"></script>
+<script src="./scripts/otp.js"></script>
+</html>
+<!-- <script type="module">
+    import navbar1 from "./components/navbar1.js";
+    document.getElementById("navbar1").innerHTML = navbar1();
+  </script> -->

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin index</title>
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="style/adminindex.css">
+
+    <!-- FONT AWESOOME LINK -->
+    <script src="https://kit.fontawesome.com/714346974b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+    <!-- <nav>
+        <i class="fa-solid fa-bars" id="hamburger"></i>
+        <div id="nav_right_side">
+            <div id="brand_name">CraftBazaar</div>
+            <input type="text" placeholder="Search here" >
+        </div>
+        <div id="nav_left_side">
+            <div><i class="fa-solid fa-user "></i><span>Register / Login</span></div>
+            <div><i class="fa-regular fa-heart "></i><span>Wishlist</span></div>
+            <div><i class="fa-solid fa-cart-shopping "></i><span>Cart</span></div>
+        </div>
+    </nav>
+
+
+    <div id="burger">
+        <div>Register/Login</div>
+        <div>Wishlist</div>
+        <div>Cart</div>
+    </div> -->
+    <!-- NAVBAR END HERE -->
+
+
+    <div id="main_container">
+        <div class="container">
+            <h2>Add the Product</h2>
+            <form>
+                <label>Title</label><input type="text" class="name title">
+                <label>Image URL</label><input type="text" class="name imageURL">
+                <label>Price</label><input type="number" class="name price">
+                <label>Description</label><input type="text" class="name desc">
+                <button>ADD THE PRODUCT</button>
+            </form>
+        </div>
+    
+        <div class="container">
+            <h2>Delete the Product</h2>
+            <form>
+                <label>Title</label><input type="text" class="name title">
+                <label>Image URL</label><input type="text" class="name imageURL">
+                <label>Price</label><input type="number" class="name price">
+                <label>Description</label><input type="text" class="name desc">
+                <button>DELETE THE PRODUCT</button>
+            </form>
+        </div>
+    
+        <div class="container">
+            <h2>Edit the Product</h2>
+            <form>
+                <label>Title</label><input type="text" class="name title">
+                <label>Image URL</label><input type="text" class="name imageURL">
+                <label>Price</label><input type="number" class="name price">
+                <label>Description</label><input type="text" class="name desc">
+                <button>EDIT THE PRODUCT</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="scripts/adminindex.js"></script>
+</html>
+<script type="module">
+    import navbar from "./components/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+  </script>

@@ -1,0 +1,51 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+#card{
+    width: 45%;
+    height: 520px;
+     font-family:serif;
+    margin: auto;
+   
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#admin-user-btns{
+    display: flex;
+}
+.adminCustomer-btn{
+  height: 50px;
+    width: 50%;
+}
+#contents{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.content-left>img{
+   width: 15%;
+}
+#email{
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+#password{
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+#login{
+    background-color: #902735;
+    border: 1px solid red;
+    color: white;
+    height: 25px;
+   padding-top: 8px;
+   margin-top: 10px;
+    
+} 

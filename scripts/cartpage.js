@@ -2,6 +2,7 @@
     let cart=document.getElementById("Cart");
     let empty=document.getElementById("submit")
     let buy=document.getElementById("submit")
+
     let final_buy=document.getElementById("final_buy")
        final_buy.addEventListener("click",()=>
        {
@@ -9,6 +10,7 @@
         localStorage.setItem("price",total_price)
         // window.location.href="./checkout.html";
        })
+
     empty.addEventListener("click",() =>
           { 
             localStorage.clear();
@@ -24,6 +26,7 @@
           }
 
           displayproduct(cartdata);
+
 let total_price;
           function displayproduct(data)
          {
@@ -100,6 +103,7 @@ let total_price;
         //   card.append(image,title,price1,price,plus,minus,span);
         //   cart.append(card);
         // });
+
       }
        let total = document.getElementById("order-total")
       //  let input = document.getElementById("input")

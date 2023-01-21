@@ -72,7 +72,14 @@
 #carousel > img{
     width: 100%;
 }
-
+.indexstyle{
+    text-decoration: none; 
+    color: black;
+}
+.indexstyle1{
+    text-decoration: none; 
+    color: #902735;
+}
 
 /* RESPONSIVENESS */
 

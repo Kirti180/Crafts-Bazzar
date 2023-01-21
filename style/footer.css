@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 5%;
-  
+  margin-top: 10%;
 }
 #footerabout{
     margin-left: 25%;
