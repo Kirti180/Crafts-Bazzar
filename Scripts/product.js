@@ -55,65 +55,144 @@ function showPrice() {
         if (data[i].price <= 500) {
             arr.push(data[i]);
         }
-        else if (data[i].price > 500 && data[i].price <= 1000) {
+        //  if (data[i].price > 500 && data[i].price <= 1000) {
+        //     arr1.push(data[i]);
+        // }
+        //  if (data[i].price > 1000 && data[i].price <= 2000) {
+        //     arr2.push(data[i]);
+        // }
+        //  if (data[i].price > 2000 && data[i].price <= 5000) {
+        //     arr3.push(data[i]);
+        // }
+        //  if (data[i].price > 5000) {
+        //     arr4.push(data[i]);
+        // }
+    }
+    //  console.log(arr) 
+    DisplayTable(arr)
+   
+    // //    console.log(arr2) 
+    // DisplayTable(arr2)
+    // //    console.log(arr3) 
+    // DisplayTable(arr3)
+    // //    console.log(arr4) 
+    //  DisplayTable(arr4)
+}
+
+function showPrice1() {
+    let arr1 = [];
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].price > 500 && data[i].price <= 1000) {
             arr1.push(data[i]);
-        }
-        if (data[i].price > 1000 && data[i].price <= 2000) {
+        }    
+    }
+    //    console.log(arr1) 
+    DisplayTable(arr1)
+}
+function showPrice2() {
+    let arr2 = [];
+    for (let i = 0; i < data.length; i++) {
+         if (data[i].price > 1000 && data[i].price <= 2000) {
             arr2.push(data[i]);
         }
-        if (data[i].price > 2000 && data[i].price <= 5000) {
+    }
+    //    console.log(arr2) 
+     DisplayTable(arr2)
+    
+}
+function showPrice3() {
+    let arr3 = [];
+    for (let i = 0; i < data.length; i++) {
+         if (data[i].price > 2000 && data[i].price <= 5000) {
             arr3.push(data[i]);
         }
-        if (data[i].price > 5000) {
+        
+    }
+    console.log(arr3) 
+     DisplayTable(arr3)
+   
+}
+function showPrice4() {
+    let arr4 = [];
+    for (let i = 0; i < data.length; i++) {
+         if (data[i].price > 5000) {
             arr4.push(data[i]);
         }
     }
-    // console.log(arr) 
-    DisplayTable(arr)
-    //   console.log(arr1) 
-    DisplayTable(arr1)
-    //   console.log(arr2) 
-    DisplayTable(arr2)
-    //   console.log(arr3) 
-    DisplayTable(arr3)
-    //   console.log(arr4) 
-    DisplayTable(arr4)
+    console.log(arr4) 
+      DisplayTable(arr4)
 }
 
 function showCategory() {
     let cat = [];
-    let cat1 = [];
-    let cat2 = [];
-    let cat3 = [];
-    let cat4 = [];
     for (let i = 0; i < data.length; i++) {
         if (data[i].category === "fashion") {
             cat.push(data[i]);
-        }else if (data[i].category == "ceramic mugs") {
+        }
+        //  if (data[i].category == "ceramic mugs") {
+        //     cat1.push(data[i]);
+        // }
+        // if (data[i].category == "home decor") {
+        //     cat2.push(data[i]);
+        // }
+        // if (data[i].category > "idols") {
+        //     cat3.push(data[i]);
+        // }
+        // if (data[i].category == "kitchen Ware") {
+        //     cat4.push(data[i]);
+        // }
+    }
+       console.log(cat) 
+     DisplayTable(cat)
+    //    console.log(cat1) 
+    // DisplayTable(cat1)
+    // //   console.log(cat2) 
+    // DisplayTable(cat2)
+    // //   console.log(cat3) 
+    // DisplayTable(cat3)
+    // //   console.log(cat4) 
+    // DisplayTable(cat4)
+}
+function showCategory1() {
+    let cat1 = [];
+    for (let i = 0; i < data.length; i++) {
+       if (data[i].category == "ceramic mugs") {
             cat1.push(data[i]);
         }
+    }
+        console.log(cat1) 
+    DisplayTable(cat1)
+}
+function showCategory2() {
+    let cat2 = [];
+    for (let i = 0; i < data.length; i++) {
         if (data[i].category == "home decor") {
             cat2.push(data[i]);
         }
+    }
+       console.log(cat2) 
+    DisplayTable(cat2)
+}
+function showCategory3() {
+    let cat3 = [];
+    for (let i = 0; i < data.length; i++) {
         if (data[i].category > "idols") {
             cat3.push(data[i]);
         }
+    }
+       console.log(cat3) 
+    DisplayTable(cat3)
+}
+function showCategory4() {
+    let cat4 = [];
+    for (let i = 0; i < data.length; i++) {
         if (data[i].category == "kitchen Ware") {
             cat4.push(data[i]);
         }
     }
-    //   console.log(cat) 
-     DisplayTable(cat)
-    //    console.log(cat1) 
-    DisplayTable(cat1)
-    //   console.log(cat2) 
-    DisplayTable(cat2)
-    //   console.log(cat3) 
-    DisplayTable(cat3)
-    //   console.log(cat4) 
+       console.log(cat4) 
     DisplayTable(cat4)
 }
-
 
 
 // Fetch and Render
