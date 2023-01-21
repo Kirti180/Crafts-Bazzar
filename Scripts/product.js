@@ -142,7 +142,7 @@ function showCategory() {
         //     cat4.push(data[i]);
         // }
     }
-       console.log(cat) 
+    //    console.log(cat) 
      DisplayTable(cat)
     //    console.log(cat1) 
     // DisplayTable(cat1)
