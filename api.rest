@@ -2,20 +2,67 @@
 GET https://63c657d5d307b76967371c02.mockapi.io/users/1
 
 GET https://63c657d5d307b76967371c02.mockapi.io/users/1
+###
 
+GET https://63c657d5d307b76967371c02.mockapi.io/users
 
+###
+GET https://63c657d5d307b76967371c02.mockapi.io/products
 
-# POST https://63c657d5d307b76967371c02.mockapi.io/users
-# Content-Type: application/json
+###
+POST https://63c657d5d307b76967371c02.mockapi.io/products
+Content-Type: application/json
 
-#   {
-#     "firstName": "Prashant",
-#     "lastName": "singh",
-#     "email": "abd@gmail.com",
-#     "password": "abd123"
+{
+    "title" : "title",
+    "image" : "image",
+    "price" : "price",
+    "desc" : "desc"
+}
+###
+
+POST https://63c657d5d307b76967371c02.mockapi.io/users
+Content-Type: application/json
+
+  {
+    "firstName": "amanaa ",
+    "lastName": "gupta",
+    "email": "ag@gmail.com",
+    "password": "ag123"
   
-#   }
+  }
+
+###
+
+GET https://63c657d5d307b76967371c02.mockapi.io/users
 
 
-DELETE https://63c657d5d307b76967371c02.mockapi.io/users/5
+###
+POST https://63c657d5d307b76967371c02.mockapi.io/products
+Content-Type: application/json
+
+{
+    "title" : "ti",
+    "image" : "image",
+    "price" : "price",
+    "desc" : "desc"
+}
+
+###
+
+GET https://63c657d5d307b76967371c02.mockapi.io/products
+
+###
+DELETE https://63c657d5d307b76967371c02.mockapi.io/products/101
+
+###
+PATCH https://63c657d5d307b76967371c02.mockapi.io/products/5
+Content-Type: application/json
+
+{
+    "title" : "tirr",
+    "image" : "image",
+    "price" : "price",
+    "desc" : "desc"
+}
 
