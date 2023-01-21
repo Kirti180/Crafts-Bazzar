@@ -389,6 +389,11 @@
 </script>
 <!-- =================otp part==================== -->
 <script>
+  let amout=document.getElementById("checkoutamout")
+  let data=JSON.parse(localStorage.getItem("checkout"))||[]
+  data.forEach(element => {
+    amout.innerText=element.total
+  });
   let order=document.getElementById("dropdownMenu")
   // let a = document.createElement("a");
   //   a.setAttribute("href", "#open-modal");
