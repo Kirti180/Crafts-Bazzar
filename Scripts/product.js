@@ -54,7 +54,6 @@ function showPrice() {
     for (let i = 0; i < data.length; i++) {
         if (data[i].price <= 500) {
             arr.push(data[i]);
-            // DisplayTable(arr)
         }
         //  if (data[i].price > 500 && data[i].price <= 1000) {
         //     arr1.push(data[i]);
@@ -119,10 +118,9 @@ function showPrice4() {
          if (data[i].price > 5000) {
             arr4.push(data[i]);
         }
-   
+    }
     console.log(arr4) 
       DisplayTable(arr4)
-
 }
 
 function showCategory() {
