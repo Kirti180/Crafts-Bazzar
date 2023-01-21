@@ -13,7 +13,7 @@ let passwordInput=document.getElementById("password")
             data.map((element)=>{
                 if((element.email==emailInput.value)&&(element.password==passwordInput.value)){
                    alert("Login Successful!")
-                   
+                   window.location.href="./adminindex.html"
                 }
             })
     
