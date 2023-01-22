@@ -7,6 +7,10 @@ let productimage1=document.getElementById("pro_image2")
 let productimage2=document.getElementById("pro_image3")
 let productimage3=document.getElementById("pro_image4")
 let productimage4=document.getElementById("pro_image5")
+let productimage5=document.getElementById("pro_image6")
+let productimage6=document.getElementById("pro_image7")
+let productimage7=document.getElementById("pro_image8")
+let productimage8=document.getElementById("pro_image9")
 let arr = ["https://cdn.plotch.io/image/upload/C/V/1671110161_Mi5wbmc=.png",
             "https://cdn.plotch.io/image/upload/C/V/1671110178_SG9tZWRlY29yLnBuZw==.png",
             "https://cdn.plotch.io/image/upload/C/V/1671110155_NC5wbmc=.png",
@@ -66,5 +70,20 @@ productimage3.addEventListener("click",()=>{
 })
 
 productimage4.addEventListener("click",()=>{
+  window.location.href="product.html"
+})
+productimage5.addEventListener("click",()=>{
+  window.location.href="product.html"
+})
+productimage6.addEventListener("click",()=>{
+  window.location.href="product.html"
+})
+productimage7.addEventListener("click",()=>{
+  window.location.href="product.html"
+})
+productimage8.addEventListener("click",()=>{
+  window.location.href="product.html"
+})
+productimage9.addEventListener("click",()=>{
   window.location.href="product.html"
 })

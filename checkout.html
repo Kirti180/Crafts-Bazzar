@@ -392,11 +392,9 @@
 <!-- =================otp part==================== -->
 <script>
   let amout=document.getElementById("checkoutamout")
-  let data=JSON.parse(localStorage.getItem("price"))||[]
-  console.log(data)
-  data.forEach(element => {
-    console.log(data)
-  });
+  let data=JSON.parse(localStorage.getItem("price"))
+  amout.innerText=data
+  
  
   let order=document.getElementById("dropdownMenu")
   // let a = document.createElement("a");
