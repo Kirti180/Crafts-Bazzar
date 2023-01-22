@@ -15,9 +15,7 @@ let passwordInput=document.getElementById("password")
                    alert("Login Successful!")
                    window.location.href="./adminindex.html"
                 }
-                else{
-                    alert("wrong Password")
-                }
+                
             })
     
         })
