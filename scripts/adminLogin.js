@@ -15,10 +15,15 @@ let passwordInput=document.getElementById("password")
                    alert("Login Successful!")
                    window.location.href="./adminindex.html"
                 }
+                else{
+                    alert("wrong Password")
+                }
             })
     
         })
-        .catch((err)=>{console.log(err)})
+        .catch((err)=>{console.log(err)
+        
+        })
     })
 
 
